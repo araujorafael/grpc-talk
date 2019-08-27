@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package cypher;
+option go_package = "proto";
+
+service CypherService {
+        rpc Encode(CypherRequest) returns (CypherResponse);
+        rpc Decode(CypherRequest) returns (CypherResponse);
+}
+
+message CypherRequest {
+        CypherOptions options = 1;
+        string id = 2;
+}
+
+message CypherResponse {
+        string encrypedText = 1;
+        CypherOptions options = 2;
+}
+
+message CypherOptions {
+        string text = 1;
+        int32 shift = 2;
+}
