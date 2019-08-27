@@ -4,6 +4,7 @@ go 1.12
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/gin-gonic/gin v1.4.0
 	github.com/golang/protobuf v1.3.2
 	github.com/kr/pty v1.1.8 // indirect
 	github.com/labstack/gommon v0.3.0
